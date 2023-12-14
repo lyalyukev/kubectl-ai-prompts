@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  site.conf: |
+    server {
+        listen 80;
+        server_name example.com;
+        location / {
+            root /usr/share/nginx/html;
+            index index.html;
+        }
+    }

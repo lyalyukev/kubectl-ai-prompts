@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: php-fpm-nginx
+spec:
+  containers:
+    - name: php-fpm
+      image: php:fpm
+      ports:
+        - containerPort: 9000
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
